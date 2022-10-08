@@ -1,0 +1,172 @@
+Agenda :-
+---------------
+crontab
+git revert
+git 3-way merging
+git conflict 
+
+
+
+remaining
+_--------------
+git tag
+git stash 
+git rebase 
+
+
+Crontab :-
+-------------------------
+job scheduling
+
+For example :- Our development team is going to complete the build at morning 4am  
+
+test eng they will be starting working from 9am 
+
+4am -- 9am ----> 5hours 
+
+crontab :- By using this we can schedule the job at 4am and it will automatically trigger and it will test the build 
+
+It is like message scheduling.
+
+
+Scheduling job :-
+---------------------
+step 1 :- create one shell script
+
+ syn :- command >> /path/file.txt
+
+        data >> /home/ec2-user/skill.txt
+
+note :- txt file name what we are giving if it is present it will take that one or else it will create one
+
+step 2 :- chmod 777 <shll-script>
+
+step 3 :- crontab -e
+
+syn :- * * * * * /path/shell-script.sh
+
+     * * * * * /home/ec2-user/skill.sh
+
+step 4 :- tail -f shell.txt
+
+
+To list the cronjobs :-
+--------------------------
+crontab -l
+
+To remove the jobs :-
+----------------------------
+crontab -r 
+
+GIT
+----------------------------
+git reset :- 
+
+sceanrio :- I have created 10 files in that i have added all files to staging area but after sometime i dont want to add 2 files into
+            staging area(i want to remove the file from staging area)
+
+git reset <file-name> :- it will remove the file from staging area 
+
+git reset head~1
+
+git revert :-
+----------------------------
+sceenario :- To modifie the commit msg .
+
+undo the commits 
+
+by using git revert we can modify the commits and it will create one new commit for modified one 
+
+git revert <commit-id>
+
+Git 3 way merging :-
+-----------------------------------
+master --c1-c2-c3  checkout 
+child  ---f1  checkout master
+master --c4 
+
+conflict :- master and child are going modified the same file and same line that time git will get confuse that time manager 
+
+            he will understand the situation then he will choose the better one and he will will remove unwanted line 
+
+after modification again we need to add and commit 
+
+merging :- master --child --master 
+
+
+3 way merging :-
+--------------------
+
+master :-
+step 1 :- create one file , add the file staging area , commit "c1"
+
+step 2 :- modifiy the created  file , add the file staging area , commit "c2"
+
+step 3 :- modifiy the created  file , add the file staging area , commit "c3"
+
+step 4 :- git checkout child(feature)
+
+step 5 :- modify the branch which we have created in the master branch & add it staging area and commit .
+
+step 6 :- git checkout master
+
+step 7 :- modify the same file & add it & commit it
+
+step 8 :- git merge child(feature)
+
+
+conflict:-
+-------------------------
+step 9 :- conflict will arise 
+
+step 10 :- we need to open the file & we need to remove the conflict 
+
+which one we need to remove :-
+------------------------------
+we need analyse the code & choose the better one and remove the unwanted code 
+
+step11 :- add the file & commit it 
+
+after this merge 
+
+git merge <child branch>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

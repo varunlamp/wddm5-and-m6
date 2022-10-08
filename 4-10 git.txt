@@ -1,0 +1,81 @@
+Revision :-
+----------------
+1.git branch :-
+2.git merge :- to merge (add the ) commits of the branches .
+3.git remote add origin <url> :- Mapping the local git repo to remote repo (connection)
+4.git push :- push the local changes to remote repo 
+
+
+
+
+Agenda:-
+---------------
+1.git clone <url>
+2.git merge (2 way merge & 3 way merge) 
+3.git stash
+4.git reset
+5.git revert
+6.git rebase
+
+Commands :-
+------------------------------
+1.git clone <url> :- It will copy the entire remote repo to local repo.
+
+scenario :- git init :- when we are going start with the new project 
+
+            team we will be having 4-5 members 
+
+            manager give the task to perform some the features
+
+            4 members they are going create there local repo and they will work on that after once they finish the task 
+they are going to connect to remote repo 
+
+
+
+step 1 :- git init <repo>
+step 2 :- create files 
+step 3 :- git add .
+step 4 :- git commit -m "msg"
+step 5 :- git remote add origin <url> 
+
+2.git reset :- To undo the chnages 
+
+        options 
+
+   *) git reset <file-name> :- by using this we have removed the file from staging area
+   
+   *) git reset head~2 :- It will remove the specific number of commits
+
+git reset --soft head~1 :- to remove the commit & changes back to staging area 
+
+git reset --hard head~1 :- it will remove the file from staging area as well as from the branch.
+
+
+Assignment :-
+------------------
+
+1.git fetch    And differnce between git fetch and git pull
+2.git pull
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

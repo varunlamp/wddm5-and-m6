@@ -1,0 +1,222 @@
+Revision:-
+---------------------
+1.touch :- to create the files
+
+          syn :- touch <file-name>
+
+2.mkdir :- to create a new directory   windows:- folder
+                                       linux :- Directory
+
+          syn :- mkdir <dir-name>
+3.ls :- It will list the files or dir which are present inside the excisting path.
+
+4.cd :- to change directory.
+
+5.pwd :- to print the present working directory .
+
+6.vi/nano :- editors.
+
+7.cat :- to display the contnet which is present inside the files.
+
+         i) cat > file-name :- It will override the old data & it will save only new data.
+           
+         ii) cat >> file-name :- it will save old data along with the new data.
+
+8.cp :- To copy the files or directory from one path to others paths
+
+9.mv :- to move the files/directory from one to other path 
+
+        *) to rename the file/directory names : 
+            
+              syn :- mv <old-file/dir> <new-file/dir>
+
+10. whoami :- It will print the current user-name 
+
+todays agenda:-
+---------------------
+ssh --done
+rm ----done
+rmdir ---done
+echo ---
+cal
+date 
+system informations 
+user management 
+files
+file permissions 
+ 
+
+
+
+
+1.ssh :- To connect aws instance to terminal
+  
+           syn :- ssh -i <pem-file> ec2-user@public-ip
+
+2.rm :- to delete the files 
+
+         syn:- 1.rm <file-name>
+               2.rm *.<ext>
+               3.rm -f <file-name>
+
+3.rmdir :- to remove the empty directory.
+ 
+            syn : rmdir <dir>
+
+
+*) To delete the directorys which having the data/files 
+          syn :- rm -rf <directory-name>
+
+4.echo :- to print the data 
+
+         syn :- echo "message"
+
+          ex :- echo "task is done"
+*) printf :- to print the data
+
+5.cal :- it will print the calender
+
+        syn :- cal
+               cal <year>
+
+6.date :- it will print the data 
+
+*) To know about our system information :-
+--------------------------------------------------
+1.uname :- It will print the kernal name.
+
+2.uname -o :- It will print the operating system. 
+
+3.uname -r :- To know about kernal Relase .
+
+4.uname -v :- To know about the version.
+
+5.uname -m :- To know about the machine. 
+
+6.uname -a :- To print the all the information about our machine.
+
+*)user management:-
+---------------------------------------
+management of users 
+
+in workspace we will be having one system :- that system is being used by multiple 
+users (accountant, cashier) 
+
+example 1:- 
+supermarket :- in cash counter we will be having systems
+
+               shift wise jobs  
+1st 8-person1--create the users per1,per2,per3 
+2nd 8-person2--
+3rd 8-person3--
+
+Restricting the other users to use our accont 
+
+ways to create the users :-
+-----------------------------------
+1.GUI :- graphical user interface 
+
+2.By using command line we can create the users 
+
+3.Modifying the files 
+
+ /etc/passwd  
+
+
+
+Creating users:
+---------------------------
+Root user is the person one who having all the permissions to create the users
+modification 
+
+1.useradd :- create a user
+
+syn :- useradd <user-name>
+
+to verify :- /etc/passwd
+
+2.passwd :- To set the password for the specific user.
+
+           syn :- passwd <user-name>
+3.openssl passwd <user-name> :- To Encrypt the password.
+
+4.chage :- To know the information about password.
+
+5.userdel:- we can delete the user
+      
+           syn :- userdel -r <user-name>
+
+
+Linux groups :-
+----------------------------
+1.groupadd :- To create the group 
+
+          syn :- groupadd <grp-name>
+
+2.to verify :- nano /etc/group
+
+3.usermod :- to add the users to group 
+
+          syn :- usermod -a -G <group-name> <user-name>
+
+4.groupmod :- To change the group-name.
+ 
+          syn :- groupmod <old-grpname> <new-name>
+
+5.groupdel :- To delete the group 
+ 
+         syn :- groupdel <grp-name>
+
+6.remove the user from group :- 
+
+syn :- gpasswd -d <user-name> <grp-name>.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+               
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

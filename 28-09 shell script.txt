@@ -1,0 +1,206 @@
+Agenda
+---------------------------
+1.what is shell scripting(shell & scripting).
+2.importance of shell scripting.
+3.different types of shell.
+4.creating a basic shell scripts
+5.making the shell script executable
+6.what is variables
+7.system defined variables.
+8.user defined variables.
+9.local and global varibles.
+10.opeartors.
+11.looping.
+12.switch case(case-esac).
+13.flow control.
+14.functions.
+15.set& unset.
+16.readonly.
+
+-----------------------------------------------------------------------------------------
+compare with script and programming :-
+------------------------------------------------
+script :-
+1.weekly or loosly typed programming.
+2.scripting interpreter .
+
+
+
+
+programming:-
+1.strickly typed & syntax based.
+2.compiler based.
+
+Compiler & interpreter:-
+-------------------------------------------
+
+program we are going to write it will be in the human readable langauage but system cannot understand the 
+human reable lang our system can understand only binary langauage.
+
+example :-java
+ 
+compiler :- it will check the syntax & it will convert the .java file into .class file.
+
+Interpreter :- It will check line by line and it will convert .class file into bit formates
+
+              (binary ----0101) 
+
+What is shell :-
+---------------------------------------
+shell is special user program which provide an interface to user to use operating system services ,
+shell accept human readble commands from user and convert into something which kernal can understand.
+it is a command lang intrepreter that execute commands read from input devices such as keyboard or from files
+the shell gets started when the user logs or start the terminal..
+
+scenarios :-
+-----------------------------------------
+1. why we need to use shell scripting :-
+
+
+VTU ---- given me one task that i need to creat a directory for specific colleges and i need to add the 
+         teaching staff , non teaching staff & students which belongs different different branches .
+
+500 eng & 200 MBA colleges & MTECH 50 , MCA 50
+
+insted of writing the commands what i will do i will create one script 
+
+ex :- #!/bin/bash
+       
+       mkdir college
+       read 
+
+       touch file
+       
+
+commands :-
+---------------------
+1.mkdir :- we are going to create the directory.
+2.touch :- we are going to create the files.(branches, teaching staff, non teaching staff)
+3.vi/nano editors we are going to add the information..
+
+
+sceanrios 2:-
+-------------------------------------------
+consider As a system admin we will working  manger will give one task we need to install the tomcat in
+one system & we need enable the tomcat 
+
+task :-
+-------------------
+yum update ----we need wait to complte this task
+yum install tomcat ----we need wait to complte this task
+systemctl start tomcat ----we need wait to complte this task
+
+
+50 systems i need perform this task in a single day
+
+i will one script :- 
+
+yum update ---- no need wait to complte this task
+yum install tomcat ---- no need wait to complte this task
+systemctl start tomcat ---- no need wait to complte this task.
+
+
+created one script :-
+-----------------------------
+step 1:- create one file with the extension of .sh
+step 2 :- open the editor 
+
+         #!/bin/bash
+
+step 3 :- execute by 
+
+   sh filename.sh
+
+Variables :-
+---------------------------------
+def :- variable is a named memory location which is used to store the data & it can change n times during 
+       execution.
+
+example :- a=10, b=skillrary 
+10 is stored in a means the value of a is 10 know 
+
+the value of b is skillrary 
+
+example for script :-
+----------------------
+
+#!/bin/bash
+
+x=20
+echo $x
+
+
+Varaible we will be having 3 types :-
+---------------------------------------
+1.user defined varaibles :- The user is going to create the varaible (assign ) 
+
+
+
+2.system defined varaibles :- already system will be having some varaibles
+
+examples :- echo $HOME
+            echo $OSTYPE
+            echo $PATH 
+
+
+
+
+3.environment varaibles :- 
+
+examples :-printenv
+set
+
+Read only varaibles :-
+------------------------------------
+After a varaible is marked Read-only its value cannot be changged 
+
+a=20
+readonly a
+
+unset this value it will not change 
+
+Unset :-
+----------------
+We are going unset the value  
+
+example :- 
+#!/bin/bash
+a=20
+unset a
+a=15
+echo the value of a is $a
+
+output:-
+--------------
+the value of a is 15
+         
+
+
+
+
+
+
+ 
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,173 @@
+Reset the password :-
+------------------------------
+1.passwd :- when as a user we want change the password.
+
+2.passwd <user-name> :- we can change the password for specific user.
+
+3.passwd -e <username> :- it will expire the password .
+
+---------------------------------------------------------------------------------------------------
+Agenda :-
+-----------------
+1.Files. --completed
+2.file permissions. ---completed
+3.Filter. ----complted 
+4.Extraction formats. -----tommarow
+
+File structure :-
+-------------------------
+1.bin :- we will be having binaries files(cooamnds & exectable files).
+
+2.etc :- It is the file in this configuartion files will be availble.
+
+3.opt :- standard directory to install the 3rd party applications.
+
+4.home :- It is the default directory in this dir we will be having user files.
+
+5.var :- it is the sub directory of root directory.
+
+6./usr:- In this we will be having program files .
+
+7./tmp :- temporary files when we restart our system all the data will erase which is present inside the temp dir.
+
+
+File permissions :- 
+---------------------------------------------------------------------
+1. 7 ---read-4+ write-2+ execute 1                              7                                 7
+  Owner                         Group                             others
+(read-4,write-2,execute-1     (read-4,write-2,execute-1       (read-4,write-2,execute-1 
+
+
+owner---read
+group ---read,write,execute
+others----execute 
+
+signup ------- 4           7                    1
+               read    read,write,execute     execute 
+
+1.chmod 777 <file-name>
+
+2.chmod u=rwx,g+w,o+r <file-name>
+
+
+To check the file content:-
+---------------------------
+1.file <file-name>
+
+
+Filter commands:-
+---------------------------------------------------------
+To filter the data 
+
+ex :- we will be having one database to use the data which are present inside the database we will be using sql lang to retrive the 
+      data .
+      similarlly :- linux we will be using filter commands 
+
+1.univeristy :- so many colleges comes unders university, i want only one college user,
+
+                quiry:- vtu, Bms , Mech ,pradeep.
+
+filter commands :- to retrive the specific task.
+
+1.Head :- It will display the top 10 lines when we run only head <file-name> (default it will print 10lines)
+
+-n :- It will print the number of lines
+   
+    syn  :- head -(num) <file-name>
+
+-c :- it will print the specified number of character.
+  
+   syn  ;- head -c<num> <file-name>
+
+-v :- complete information 
+
+  syn : head -v <file-name>
+
+-q :- it will not print full details
+
+  syn : head -q <file-name>
+-----------------------------------------------------------------------------------------------------------
+
+Tail :- it will print the data from bottom -top  order
+
+-n :- It will print the number of lines
+   
+    syn  :- head -(num) <file-name>
+
+-c :- it will print the specified number of character.
+  
+   syn  ;- head -c<num> <file-name>
+
+-v :- complete information 
+
+  syn : head -v <file-name>
+
+-q :- it will not print full details
+
+  syn : head -q <file-name>
+
+3.pipeline :- it is the main part of filer commands 
+             when we are using this command the previous command output will be input for next command
+
+syn :- |
+
+ex :- cat college | head -4 | tail -2
+
+4.sort :- it will sort the data in asc/des order according to the assci value
+
+options :- sort <file-name>
+             
+           sort -r <file-name> :- it will print the data in reverse order.
+
+5.Uniq :- to print the uniq data without any duplicates (to avoid the duplicate data) 
+
+   uniq <file-name>
+
+uniq -c <file-name> :-It will count the number of occurance of the dupicate data
+
+uniq -d <file-name> :- Display the only duplicate contnet .
+
+6.grep :- global regular expression print 
+*) the grep command filters the contnet of a file which makes our search easy 
+
+ex :- grep <contnet/data> <file-name>
+
+7.sed :- stream editor 
+
+  ) Replacing in nth line:-
+                1.ex;- sed ‘3 s/sam/manu/’ sakmanu.txt
+                 2.ex:- sed ‘1,3 s/sam/manu/’ sakmanu.txt
+   ) printing only replaced data;-
+                 ex;- sed –n ‘s/sam/manu/p’ sakmanu.txt
+          Note:- if we not mention “/p” it will not print
+  ) Delete the line or content:- 
+                  1.ex;-sed ‘2d’ sakmanu.txt
+                     2.ex;-sed ‘$d’ sakmanu.txt
+  ) using pipe command: 
+           ex : echo hello | sed ‘s/hello/done/’
+
+8.tr :- translate 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

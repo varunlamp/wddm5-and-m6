@@ -1,0 +1,159 @@
+Agenda :-
+------------------
+1.git stash
+2.git tag
+3.git rebase
+4.git cherry-pick
+
+
+1.git stash:-
+-------------------------------
+dev1      dev2        project lead
+
+signup    login     he is involved in the testing
+
+while testing the project lead founds a critical bug in master branch & master 
+branch is there in server where other functionality of the application is working 
+fine
+
+--> there is a high priority bug to get fix 
+
+-->project lead he will ask to dev1 to fix but dev1 is not available .
+
+--> project lead will ask to dev2 to fix this bug.
+
+-->dev2 is working in the login branch but he will be in the middle of the work 
+  
+--> after writting the codes he will adding the source code to staging area
+
+-->insted of commiting he will be doing git stash 
+
+-->git stash is the command which is used to store the data for temperovery 
+
+
+dev2 --- his work is not completed he will store it temp 
+
+
+login :---
+-------------------
+200 lines code 
+
+50 lines of ----it will be the not valid 
+
+
+working with stash
+-------------------------
+step 1 :- will be working in login branch 
+
+
+create one file 
+
+touch <file-name>
+
+nano <file>
+
+git add <file>
+
+git stash
+           
+we have added the file to stagging area 
+
+step 2:- git stash 
+
+step 3 :- git status
+
+--------------------------------
+1.git stash :- which is used to store the data for temporvery purpose
+
+2.git stash list :- It will display the list of stashed data
+
+3.git stash apply :- It will get back the changes and add (stash history)
+
+4.git stash pop :- It will get back the changes & it will clear the history .
+
+
+Git Tag :-
+-----------
+Tagging lets developers mark important checkpoints 
+
+similarly facebook,instagram tags we will be doing the same job in git for commits 
+
+here we will tagging the commits to tag(name)
+
+commits 
+
+
+logics ----
+the functinality of the software ---
+
+Lightweight
+
+syntax :- git tag <tag-name> commit-id 
+
+
+Annotated tag:-
+----------------------
+git tag -a "tag-name" commit-id -m "msg"
+
+
+to list the tags :-
+------------------
+git tag 
+
+
+How to push tags to repo:-
+------------------------------------
+git remote add origin <url>
+
+git push origin <branch-name> --tags
+
+ 
+
+Git cherry-pick :-
+------------------------------
+picking the commit from one branch to another branch
+ 
+or 
+
+adding the one commit to other branch 
+
+at some point while adding the commits i have added the commit in the feature insted of master 
+
+by using cherry-pick we can add the commit which we added in feature  we can add in the master
+
+
+syntax :- git cherry-pick <commit-id>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+

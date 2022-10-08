@@ -1,0 +1,313 @@
+Agenda :-
+------------------
+1.until loop.
+2.switch (case-esac).
+3.condtional statements.
+4.functions.
+5.local and global variables.
+6.array.
+
+
+shell scripting is completed ---30-09-2022
+
+
+
+Until loop :- until the work done
+
+echo "enter the number"
+read number
+init=1
+until [[ init -eq  10 ]]
+do
+echo $((init*number))
+((init++))
+done
+switch ( case --esac) :
+----------------------------------
+
+sceario :- i am having multiple options so in that i want only one condition 
+
+
+example :-
+
+      name linux 
+
+     case $name is
+
+     linux) 
+          echo "this is correct"
+     ;;
+
+     windows)
+         echo "this is wrong"
+   ;;
+esac
+
+calucaltor:-
+---------------------
+echo "enter the opeartor"
+read opr 
+case $opr in
+
++) 
+echo "enter the value for a"
+ read a 
+echo "enter the value for b"
+read b
+echo `expr $a + $b`
+;;
+
+-) 
+echo "enter the value for c"
+ read c 
+echo "enter the value for d"
+read d
+echo `expr $c - $d`
+;;
+
+\*) 
+echo "enter the value for x"
+ read x
+echo "enter the value for y"
+read y
+echo `expr $x \* $y`
+;;
+
+/)  
+echo "enter the value for e"
+ read e
+echo "enter the value for f"
+read f
+echo `expr $e / $f`     
+;;
+
+
+*)
+echo "default nothing"
+;;
+esac
+
+Functions :-
+------------------------------------
+Functions are nothing but group of statemets it will get execute when ever it is called or invoked it will get execute 
+
+scearios :-
+------------------------
+test eng writing the test cases in that they have written 50-60 features test cases 
+
+functions we will devide all the 60 featurs as 60 blocks ind we are going to check each feature 
+
+easily we can catch the error 
+
+example :-
+
+function sum()                    
+
+sum()
+{
+x=`expr $1 + $2`
+echo the addition of x is $x
+}
+# to call the function 
+sum 5 6
+
+
+my manger will give one task 
+
+first we need to install jenkins 
+we need configure the jenkins
+we need do deploy the jenkins 
+
+2.calling functions
+
+install()
+{
+echo "jenkins is installing"
+}
+
+config()
+{
+echo "jenkins is configuring"
+}
+
+deploy()
+{
+echo "jenkins is deploying"
+}
+
+install
+
+local and global variables :-
+----------------------------------------------
+
+local ---cm
+global ---PM 
+
+pkg=tomcat
+
+install()
+{
+echo "installing $pkg"
+echo "${FUNCNAME}"
+}
+
+config()
+{
+echo "${FUNCNAME}"     
+
+pkg="nginx"
+echo "config $pkg"
+}
+
+install 
+config
+
+Array :- 
+
+An array is a collection of items of some data type stored at contiguous memory location ..
+
+example:_
+
+#!/bin/bash
+
+arr=(skillrary qspiders bangalore)
+
+echo ${arr[@]:0}
+echo ${arr[@]:1}
+
+
+conditional statements:-
+-------------------------
+
+sceario :-
+
+tomcat server in only linux server  -if 
+
+linux or windows 
+
+if the os is linux then it will execute linux block if the cond is false it will execute windows --if-else
+
+IF the condition is true then only it will get execute 
+
+
+
+1.if :- if the condtion is true then only it will execute or else it will not execute
+
+2.if-else :- if the condition is true then it will execute if block or if the cond it false then else will print  
+
+3.else-if :- Multiple if conditions in a single script 
+
+1.if :-
+--------------------------
+ex :- mother will tell us to bring onions, we will go to that specific shop if onion is there will buy or else will come back .
+
+echo "enter a number"
+read n 
+
+if [ $n -lt 100 ]
+then 
+echo "$n is less then 100"
+fi 
+
+If-else:-
+-----------------
+echo "enter number"
+read a
+
+if [[ `expr $a % 2` == 1 ]]
+then
+
+echo "odd number"
+else
+echo "even"
+fi
+
+
+else--if statemts :---
+-----------------------------
+echo "enter the number"
+
+read a 
+
+if [[ `expr $a % 2` == 0 ]]
+then 
+echo "it will be the even number $a"
+
+elif [[ `expr $a % 2` == 1 ]]
+then 
+echo "it is odd number $a"
+fi  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

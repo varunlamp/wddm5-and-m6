@@ -1,0 +1,247 @@
+Agenda :--
+------------------------
+1.Operators & Expressions. ---done
+2.looping statements. ----done
+3.by using for loop we performed some task on files ----done 
+3.string operations. --done
+
+
+1.Operators & Expressions :-
+------------------------------------------------
+Operators :-
+----------------------------
+
+Arithematic operators:-
+----------------------------
+Addition --+
+substraction ---(-).
+Multiplication ----(*)
+Division -------(/)
+Persntaile ---(%)
+=,==,!=
+
+
+Logical opeartors :-
+---------------------------------------
+-eq = Equality condition.
+-ne = Not equal.
+-gt = Greter than.
+-ge = Greter then / equal to
+-lt = less then.
+-le = less then or equal to
+                                                     ssh -i "pem-file" ec2-user@IP
+
+Will perform basic arithmetic script :-
+---------------------------------------
+
+1.example :-
+
+var1=15   ---we are assigning var1=15
+var2=10
+
+sum=$(($var1 + $var2))
+echo the addition of the sum is $sum
+
+
+2.Taking the input from user :-
+-------------------------------------------
+echo "enter the value for var1"
+read var1
+echo "enter the value for var2"
+read var2
+sum=$(($var1 + $var2))
+echo the addition of the sum is $sum
+
+Expressions :-
+-------------------------------
+echo "enter the value of x"     # Taking the input users (x & Y)
+read x
+
+echo "enter the value of y"
+read y
+
+sum=`expr $x + $y`                # using expression we are doing addition task
+
+echo the sum of the expression is $sum          # printing the value of sum 
+
+
+
+example :-
+----------------------------
+echo "enter the value of x"
+read x
+
+echo "enter the value of y"
+read y
+
+echo "add the opeartor"
+read i
+
+sum=`expr $x $i $y`
+echo the value of expression is $sum
+
+
+
+String opeartors:-
+---------------------------------
+scearios :-
+-----------------------
+when ever we are doing the task using strings.
+
+When ever i want to calculate the size of the string.
+
+1.
+x=skillrary
+len=`expr length $x`
+echo the length of the x is $len
+
+2.
+read x
+len=`expr length $x`
+echo the length of the x is $len
+
+
+Looping statements :-
+------------------------------------------------
+scearios :-
+-----------------------
+
+Automation test scripts 
+
+one requirement :-
+-------------------
+time we need to send 10000 req
+
+Looping statements :- It will perfrom the task how many time you want 
+
+
+1.For loop :- It will perform the task (1 2 3 4 5 6 7 8 9 10).
+
+2.while loop :- How many time we want to perform that many time it will perform the task.
+
+Assignemt :-
+---------------------------
+3.until loop :- Do some rnd on this until loop 
+
+
+1.For loop :-
+-----------------------------
+1.
+
+for varname in item1 item2 item3    ------Read this line enter into to the loop                 {}
+
+do
+ echo "${varname}" 
+done 
+
+Debuging:-
+---------------------------------------
+[root@ip-172-31-32-161 shellscripts]# sh -x for.sh
++ for varname in item1 item2 item3
++ echo item1
+item1
++ for varname in item1 item2 item3
++ echo item2
+item2
++ for varname in item1 item2 item3
++ echo item3
+item3
+[root@ip-172-31-32-161 shellscripts]#
+
+
+-----------------------------------------------------
+2.Tables                                        
+---------------
+read -p "please enter a number" number 
+ 
+for varname in {1__10}
+do
+echo $((varname*number))
+done 
+
+
+Output :-
+----------------------
+number 2 :-
+
+1*2=2
+2*2=4
+3*2=6
+4*2=8
+5*2
+6*2
+7*2
+8*2
+9*2
+10*2 ==20
+Files :-
+--------------------------
+directory :-
+---------------------
+i want to list the number of files present inside this directory
+
+question :- By using for loop list the files 
+
+for i in *
+do
+echo $i
+done 
+
+question :- List the files only which are exetension with .txt/.sh
+
+for i in $(ls *.sh)
+do
+echo the files which is having the .sh exetention "$i"
+done
+
+
+
+While loop :-  
+----------------------------
+
+print 1--10 (range)
+
+initnumber=1 --update as 2
+while [[ ${initnumber} -le 10 ]]
+do
+echo ${initnumber}                #print 2
+((initnumber++))                  #increment 2+1=3
+done 
+
+
+2.
+read -p "enter the value of number" number
+n=1
+while [[ ${n} -le 10 ]]
+do
+echo $((n * number))
+((n++))
+done
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

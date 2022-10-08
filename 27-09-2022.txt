@@ -1,0 +1,142 @@
+Agenda :-
+--------------------------------------
+1.file Extraction formates. --done
+2.input redirection --done
+3.output redirection---done
+4.error redirection---done
+5.networking commands.----done
+6.disk utility.
+
+
+7.cron tab :-- once we start with the shell scripting that time will discuss.
+
+
+1.File Extraction formates:-
+--------------------------------------------------
+Sceanrio :-Developers job is to write the code & developers are writting the source code according the requirement 
+           java ----libiries, 
+
+ Facebook :- signup,login,search,friend request,messages--50mb  -----we will be having one tecniqe called file compression/extraction format
+             
+Tar,zip,gzip :- we are going add all the files into a single file (compressed format)
+
+ 
+When we are going to trip 
+what we will do??
+-> we will keep all the clothes together and make it is a luggage 
+
+1.zip :- To add the multiple files into a single file format called zip format
+
+syn :- zip <file.zip> files --> to zip
+ 
+       unzip file.zip ----> to unzip
+
+2.gzip :- To compress specific file (indiuasly).
+
+ syn :- gzip file.gz file2.gz file3.gz ---To gzip
+
+        gzip -d file.gz ---> to extract
+
+3.Tar :- To add the multiple files into a single file format called tar
+
+syn :- tar cvf file.tar <files> ---to create a tar 
+    
+c-> create 
+v-> verbose
+f-> files 
+
+syn:- tar xvf file.tar
+
+x :- Extract
+v-> verbose
+f-> files 
+
+-------------------------------------------------------------------------------------------------
+Input-output redirection :-
+-----------------------------------------------
+1. < stdin (standard input)
+         The bash shell uses stdin to take input. In input redirection, a file is made input to the command and this redirection is done with the help of '<' sign.
+
+Syntax: cat < <fileName> 
+
+2. stdou (standard output):-
+The stdout is redirected with a '>' greater than sign. When shell meets the '>' sign, it will clear the file (as you already know).
+
+Example: echo Hello everyone. > afile.txt
+
+3.error redirection :-
+------------------------------
+Command '2>' redirects the error of an output.It helps us you to keep our display less messy by redirecting error messages.
+
+Example: zcho hyii 2> /dev/null
+
+Networking commands :-
+----------------------------------------
+
+1.ifconfig:- To check the basic information/ to view ip adress mac address mtu(maximu transmission unit).
+
+2.ping (packet internet groper):-to test the connectivity :- 
+
+3.nslookup : nslookup <website>
+
+4.netstat:
+
+5.last :- recently logged user information.
+
+disk utilities:-
+--------------------------------
+system administartors monoitor 
+
+1.fdisk:- for fixed disk 
+
+syn :- fdisk -l (-l --list&exit)
+
+2.df:- disk free 
+
+df -hT
+
+3.parted -l :- to check the partitions
+
+4.lsblk :- list block
+
+5.blkid :-block id 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
